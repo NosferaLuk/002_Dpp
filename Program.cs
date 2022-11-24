@@ -1,29 +1,33 @@
-﻿using Blog.Models;
-using Blog.Repositories;
-using Dapper.Contrib.Extensions;
+﻿using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
+using System.Text;
+
+// Cadastrar um usuario
+// Cadastrar um Perfil
+// Vincular um usuario a um Perfil
+
+// Cadastrar uma categoria
+
+// Cadastrar uma tag
+// cadastrar um post
+
+// vincular um post a uma tag
+
+// listar os usuarios(Nome, email e perfis separados por virgula)
+// Listar categorias com quantidade de posts
+// listar tags co mquantidade de posts
+// listar os posts de uma categoria
+// listar todos os posts com sua categoria
+// listar os posts com suas tags(separados por virgula)
 
 namespace Blog
 {
     public class Blog
     {
-        private const string CONNECTION_STRING = @"Server=localhost,1433;Database=Blog;User ID=sa;Password=1q2w3e4r@#$;Trust Server Certificate = true";
         public static void Main(string[] args)
         {
-            var connection = new SqlConnection(CONNECTION_STRING);
-            connection.Open();
-            // InsertTag(connection);          
-            connection.Close();
-        }
-        
-        public static void InsertTag(SqlConnection connection)
-        {
-            var tag = new Tag()
-            {
-                Name = "ASP.NET",
-                Slug = "aspnet"
-            };
-            connection.Insert(tag);   
+            DataBase.Connection.Open();      
+            DataBase.Connection.Close();
         }
     }
 }

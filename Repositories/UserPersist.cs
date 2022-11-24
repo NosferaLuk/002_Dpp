@@ -6,9 +6,6 @@ namespace Blog.Repositories
 {
     public class UserPersist : Repository<User>
     {
-        public readonly SqlConnection _connection;
-        public UserPersist(SqlConnection connection) : base(connection)
-            =>_connection = connection;
         public List<User> GetWithRoles()
         {
             var query = @"
@@ -18,7 +15,7 @@ namespace Blog.Repositories
                 LEFT JOIN [Role] ON [UserRole].[RoleId] = [Role].[Id]";
             var users = new List<User>();
             
-            var items = _connection.Query<User, Role, User>
+            var items = DataBase.Connection.Query<User, Role, User>
             (
                 query,
                 (user, role)
@@ -27,7 +24,8 @@ namespace Blog.Repositories
                         if (usr == null)
                         {
                             usr = user;
-                            usr.Roles.Add(role);
+                            if(role !=null)
+                                usr.Roles.Add(role);
                             users.Add(usr);
                         }
                         else
