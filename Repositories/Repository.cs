@@ -3,7 +3,7 @@ using Microsoft.Data.SqlClient;
 
 namespace Blog.Repositories
 {
-    public abstract class Repository<TModel> where TModel : class
+    public class Repository<TModel> where TModel : class
     {          
         public IEnumerable<TModel> Get()
             =>DataBase.Connection.GetAll<TModel>();

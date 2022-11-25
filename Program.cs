@@ -1,4 +1,5 @@
-﻿using Dapper.Contrib.Extensions;
+﻿using Blog.Screens.MenuScreen;
+using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
 using System.Text;
 
@@ -26,8 +27,12 @@ namespace Blog
     {
         public static void Main(string[] args)
         {
-            DataBase.Connection.Open();      
-            DataBase.Connection.Close();
+            var mainMenuScreen = new MainMenuScreen();
+            var model = mainMenuScreen.Load();
+            foreach(var mod in model)
+            {
+                Console.WriteLine(mod);
+            }
         }
     }
 }
