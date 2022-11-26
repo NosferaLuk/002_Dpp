@@ -27,12 +27,7 @@ namespace Blog
     {
         public static void Main(string[] args)
         {
-            var mainMenuScreen = new MainMenuScreen();
-            var model = mainMenuScreen.Load();
-            foreach(var mod in model)
-            {
-                Console.WriteLine(mod);
-            }
+            var options = new MainMenuScreen().Draw();
         }
     }
 }

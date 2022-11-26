@@ -9,6 +9,8 @@ namespace Blog.Repositories
             =>DataBase.Connection.GetAll<TModel>();
         public TModel Get(int id)
             =>DataBase.Connection.Get<TModel>(id);
+        public TModel Get(string name)
+            =>DataBase.Connection.Get<TModel>(name);
         public void Create(TModel model)
             =>DataBase.Connection.Insert<TModel>(model);
         public void Update(TModel model)

@@ -7,11 +7,12 @@ using Blog.Repositories;
 
 namespace Blog.Screens.MenuScreen
 {
-    public class CrudScreen
+    public class CrudScreen<Tmodel> where Tmodel : class
     {
+        public int[] models { get; set; }
         public void Create()
         {  
-
+            
         }            
     }
 }

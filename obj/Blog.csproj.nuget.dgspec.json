@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Temporario\\Documents\\Curso Balta\\Blog\\Blog.csproj": {}
+    "E:\\Blog\\Dpp\\Blog.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Temporario\\Documents\\Curso Balta\\Blog\\Blog.csproj": {
+    "E:\\Blog\\Dpp\\Blog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Temporario\\Documents\\Curso Balta\\Blog\\Blog.csproj",
+        "projectUniqueName": "E:\\Blog\\Dpp\\Blog.csproj",
         "projectName": "Blog",
-        "projectPath": "C:\\Users\\Temporario\\Documents\\Curso Balta\\Blog\\Blog.csproj",
-        "packagesPath": "C:\\Users\\Temporario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Temporario\\Documents\\Curso Balta\\Blog\\obj\\",
+        "projectPath": "E:\\Blog\\Dpp\\Blog.csproj",
+        "packagesPath": "C:\\Users\\luk23\\.nuget\\packages\\",
+        "outputPath": "E:\\Blog\\Dpp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Temporario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\luk23\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
